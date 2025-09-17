@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  :root {
+    --navbar-height: 4.21rem;
+    --color-primary: #FFFFFF;
+    --color-secondary: #F9FAFB;
+    --color-accent: #D97706;
+    --color-text-primary: #1F2937;
+    --color-text-secondary: #6B7280;
+    --color-border: #E5E7EB;
+    
+  }
+
+  [data-theme='dark'] {
+    --color-primary: #111111;
+    --color-secondary: #1E1E1E;
+    --color-accent: #FFD700;
+    --color-text-primary: #F5F5F5;
+    --color-text-secondary: #A0A0A0;
+    --color-border: #374151;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply scroll-smooth; }
+  body { @apply bg-primary text-text-primary font-sans transition-colors duration-300; }
+  h1 { @apply text-5xl font-extrabold tracking-tighter text-text-primary; }
+  h2 { @apply text-4xl font-bold tracking-tight text-text-primary; }
+  h3 { @apply text-2xl font-semibold text-text-primary; }
+  p { @apply text-lg leading-relaxed text-text-secondary; }
+  .eyebrow { @apply text-sm font-semibold uppercase tracking-widest text-accent; }
+}
